@@ -1,0 +1,142 @@
+{
+    "errno": 0,
+    "data": {
+        "swipe1": [
+            {"img":"swipe01.png","id":"1"},
+            {"img":"swipe02.jpg","id":"2"},
+            {"img":"swipe03.jpg","id":"3"}
+        ],
+        "swipe3": [
+            {"img":"ad01.jpg","id":"1"},
+            {"img":"ad02.jpg","id":"2"},
+            {"img":"ad03.jpg","id":"3"}
+        ],
+        "topLine": [
+            {"text":"【爱团周刊】夏天就这样,做对了吗","id":"1"},
+            {"text":"【福利来袭】立减才够味！","id":"2"},
+            {"text":"【暑期大片】霸气四折起！","id":"3"}
+        ],
+        "recommend":[
+            {"img":"tuijian01.jpg","title":"福利来袭","text":"立减才够味","id":1},
+            {"img":"tuijian02.jpg","title":"撸串吃海鲜","text":"这才是夏天","id":1},
+            {"img":"tuijian03.jpg","title":"暑期大片","text":"霸气四折起","id":1},
+            {"img":"tuijian04.jpg","title":"享受舒适","text":"享受浪漫","id":1}
+        ],
+        "list":[
+            {
+                "id": 1,
+                "place": "海淀",
+                "img": "recom01.jpg",
+                "title": "蓝钻豪华10人餐",
+                "intro": "10人餐，可使用包间！",
+                "price": 1999,
+                "oriprice": 3196.4,
+                "sale": 105,
+                "score": 1.0
+            },
+            {
+                "id": 12,
+                "place": "海淀",
+                "img": "recom02.jpg",
+                "title": "公主单人OPI指甲油套餐",
+                "intro": "OPI指甲油套餐1次，免费WiFi，需预约！",
+                "price": 19.9,
+                "oriprice": 49.9,
+                "sale": 104,
+                "score": 1.0
+            },
+            {
+                "id": 1,
+                "place": "东城",
+                "img": "recom03.jpg",
+                "title": "铁木真64.9元单人自助",
+                "intro": "单人自助1份！",
+                "price": 64.9,
+                "oriprice": 69.9,
+                "sale": 406,
+                "score": 1.0
+            },
+            {
+                "id": 1,
+                "place": "朝阳",
+                "img": "recom04.jpg",
+                "title": "火宴山单人自助夜宵",
+                "intro": "单人夜宵1位！",
+                "price": 73,
+                "oriprice":78,
+                "sale": 13523,
+                "score": 2.0
+            },
+            {
+                "id": 10,
+                "place": "海淀",
+                "img": "recom05.jpg",
+                "title": "爱诺国际北京婚纱摄影(双井店)",
+                "intro": "双井桥西优士阁大厦A座",
+                "price": 2999,
+                "oriprice": 3699,
+                "sale": 2228,
+                "score": 1.0
+            },
+            {
+                "id": 2,
+                "place": "海淀",
+                "img": "recom06.jpg",
+                "title": "战狼2优惠团购",
+                "intro": "犯我中华者 虽远必诛",
+                "price": 29.9,
+                "oriprice": 48.9,
+                "sale": 2958,
+                "score": 5.0
+            },
+            {
+                "id": 7,
+                "place": "朝阳",
+                "img": "recom07.jpg",
+                "title": "唱吧麦颂量贩式KTV(世纪金源店)",
+                "intro": "远大路1号金源时代购物中心",
+                "price": 68.9,
+                "oriprice": 198,
+                "sale": 190,
+                "score": 5.0
+            },
+            {
+                "id": 1,
+                "place": "海淀",
+                "img": "recom08.jpg",
+                "title": "妈妈味韩式拌饭双人餐",
+                "intro": "双人套餐，午晚餐通用，节假日通用",
+                "price": 48.8,
+                "oriprice": 83,
+                "sale": 45,
+                "score": 4.0
+            },
+            {
+                "id": 1,
+                "place": "西城",
+                "img": "recom09.jpg",
+                "title": "古特比萨双人精选套餐",
+                "intro": "双人餐！免费WiFi！",
+                "price": 69.9,
+                "oriprice":102,
+                "sale": 9,
+                "score": 2.0
+            },
+            {
+                "id": 1,
+                "place": "海淀",
+                "img": "recom10.jpg",
+                "title": "百甜咖啡西点创业班",
+                "intro": "咖啡西点创业班1张！免费WiFi！",
+                "price": 1390,
+                "oriprice": 1890,
+                "sale": 6,
+                "score": 2.5
+            }
+        ],
+        "place":[
+            "东城", "西城", "海淀", "朝阳", "丰台", "门头沟", "石景山"
+        ],
+        "citys":["北京", "天津", "上海", "重庆", "河北", "河南", "云南", "辽宁", "黑龙江", "湖南", "安徽", "山东", "新疆", "江苏", "浙江", "江西", "湖北", "广西", "甘肃", "山西", "内蒙古", "陕西", "吉林", " 福建", "贵州", "广东", "青海", "西藏", "四川", "宁夏", "海南", "台湾", "香港", "澳门"]
+  }
+}

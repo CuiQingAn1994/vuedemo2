@@ -1,0 +1,87 @@
+.paybt{
+    background: #ff4683;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    color: #fff;
+    margin: 0.1rem 0.09rem;
+    text-align: center;
+    border-radius: 3px;
+}
+.order-info{
+    padding: 0 0.1rem;
+    background: #fff;
+
+}
+.order-info li{
+    height: 0.44rem;
+    border-bottom: solid 1px #ededed;
+    line-height: 0.44rem;
+    font-size: 0.13rem;
+    color: #999;
+}
+.order-info li>span:last-child{
+    float: right;
+}
+
+.order-info li span.del,.order-info li span.add{
+    display: inline-block;
+    height: 0.2rem;
+    line-height: 0.2rem;
+    width:0.2rem;
+    text-align: center;
+    border:solid 1px #ccc;
+}
+.order-info li input{
+    height: 0.2rem;
+    width: 0.4rem;
+    border: solid 1px #ccc;
+    position: relative;
+    top: -0.02rem;
+    margin: 0 0.1rem;
+    text-align: center;
+}
+.order-info li span.active{
+    border:solid 1px #ff4683;
+    color:#ff4683;
+}
+.paytype{
+    padding: 0 0.1rem;
+    margin: 0.1rem auto 0.07rem;
+}
+.order-type img{
+    vertical-align: middle;
+    margin-right: 0.1rem;
+    width: 0.3rem;
+}
+.order-type li span:last-child{
+    display: inline-block;
+    border-radius: 300px;
+    width: 0.2rem;
+    height: 0.2rem;
+    border: solid 1px #ddd;
+    margin-top: 0.1rem;
+    box-sizing: border-box;
+    color: #fff;
+    line-height: 0.18rem;
+    text-align: center;
+}
+.order-type li span:last-child.checked{
+    background: #ff4683;
+    border-color:#ff4683;;
+}
+
+.toast{
+    position: absolute;
+    height: 1.2rem;
+    width: 1.2rem;
+    top:40%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

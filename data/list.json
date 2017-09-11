@@ -1,0 +1,164 @@
+{
+  "errno": 0,
+  "data": {
+    "list": [
+      {
+        "id": 1,
+        "place": "海淀",
+        "img": "recom01.jpg",
+        "title": "蓝钻豪华10人餐",
+        "intro": "10人餐，可使用包间！",
+        "price": 1999,
+        "oriprice": 3196.4,
+        "sale": 105,
+        "score": 1.0
+      },
+      {
+        "id": 12,
+        "place": "海淀",
+        "img": "recom02.jpg",
+        "title": "公主单人OPI指甲油套餐",
+        "intro": "OPI指甲油套餐1次，免费WiFi，需预约！",
+        "price": 19.9,
+        "oriprice": 49.9,
+        "sale": 104,
+        "score": 1.0
+      },
+      {
+        "id": 1,
+        "place": "东城",
+        "img": "recom03.jpg",
+        "title": "铁木真64.9元单人自助",
+        "intro": "单人自助1份！",
+        "price": 64.9,
+        "oriprice": 69.9,
+        "sale": 406,
+        "score": 1.0
+      },
+      {
+        "id": 1,
+        "place": "朝阳",
+        "img": "recom04.jpg",
+        "title": "火宴山单人自助夜宵",
+        "intro": "单人夜宵1位！",
+        "price": 73,
+        "oriprice":78,
+        "sale": 13523,
+        "score": 2.0
+      },
+      {
+        "id": 10,
+        "place": "海淀",
+        "img": "recom05.jpg",
+        "title": "爱诺国际北京婚纱摄影(双井店)",
+        "intro": "双井桥西优士阁大厦A座",
+        "price": 2999,
+        "oriprice": 3699,
+        "sale": 2228,
+        "score": 1.0
+      },
+      {
+        "id": 2,
+        "place": "海淀",
+        "img": "recom06.jpg",
+        "title": "战狼2优惠团购",
+        "intro": "犯我中华者 虽远必诛",
+        "price": 29.9,
+        "oriprice": 48.9,
+        "sale": 2958,
+        "score": 5.0
+      },
+      {
+        "id": 7,
+        "place": "朝阳",
+        "img": "recom07.jpg",
+        "title": "唱吧麦颂量贩式KTV(世纪金源店)",
+        "intro": "远大路1号金源时代购物中心",
+        "price": 68.9,
+        "oriprice": 198,
+        "sale": 190,
+        "score": 5.0
+      },
+      {
+        "id": 1,
+        "place": "海淀",
+        "img": "recom08.jpg",
+        "title": "妈妈味韩式拌饭双人餐",
+        "intro": "双人套餐，午晚餐通用，节假日通用",
+        "price": 48.8,
+        "oriprice": 83,
+        "sale": 45,
+        "score": 4.0
+      },
+      {
+        "id": 1,
+        "place": "西城",
+        "img": "recom09.jpg",
+        "title": "古特比萨双人精选套餐",
+        "intro": "双人餐！免费WiFi！",
+        "price": 69.9,
+        "oriprice":102,
+        "sale": 9,
+        "score": 2.0
+      },
+      {
+        "id": 1,
+        "place": "海淀",
+        "img": "recom10.jpg",
+        "title": "百甜咖啡西点创业班",
+        "intro": "咖啡西点创业班1张！免费WiFi！",
+        "price": 1390,
+        "oriprice": 1890,
+        "sale": 6,
+        "score": 2.5
+      },
+      {
+        "id": 1,
+        "place": "海淀",
+        "img": "recom11.jpg",
+        "title": "便宜坊10人套餐",
+        "intro": "10人餐！可使用包间！",
+        "price": 1901,
+        "oriprice": 2236,
+        "sale": 6,
+        "score": 2.5
+      },
+      {
+        "id": 1,
+        "place": "海淀",
+        "img": "recom12.jpg",
+        "title": "一盛料理单人午餐自助",
+        "intro": "自助午餐1位！免费停车！",
+        "price": 108,
+        "oriprice": 158,
+        "sale": 159,
+        "score": 2.5
+      },
+      {
+        "id": 1,
+        "place": "朝阳",
+        "img": "recom13.jpg",
+        "title": "双人餐！需预约！保利大厦维拉花园西餐厅希腊美食",
+        "intro": "自助午餐1位！免费停车！",
+        "price": 188,
+        "oriprice": 610,
+        "sale": 14,
+        "score": 3.5
+      },
+      {
+        "id": 1,
+        "place": "朝阳",
+        "img": "recom14.jpg",
+        "title": "保利大厦268西式双人餐",
+        "intro": "保利大厦维拉花园西餐厅希腊美食双人餐！需预约！",
+        "price": 268,
+        "oriprice": 880,
+        "sale": 9,
+        "score": 3.5
+      }
+    ],
+    "place":[
+      "商区","东城", "西城", "海淀", "朝阳", "丰台", "门头沟", "石景山"
+    ]
+  }
+}

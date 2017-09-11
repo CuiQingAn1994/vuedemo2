@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title></title>
+</head>
+<body>
+
+<div id="app">
+    <router-view></router-view>
+</div>
+
+<template id="home-tpl">
+    <section>
+        <div class="city-box" :style="'transform:translateX('+cityPos+'%)'">
+            <div class="city-title" @click="showCity()">
+                <img src="img/left.png" alt="">
+                选择城市
+            </div>
+            <ul>
+                <li v-for="item in citys" @click="choseCity(item)">{{item}}</li>
+            </ul>
+        </div>
+        <header>
+            <section>
+                <div class="header">
+                    <div class="search clear">
+                        <div class="city" @click="showCity()">{{cityName}}</div>
+                        <div class="search-input">
+                            <img src="img/searchicon.png" alt="">
+                            <input type="text" @keyup.enter="gosearch()" v-model="searchText" placeholder="请输入商品名、品类或商圈...">
+                        </div>
+                        <div @click="gouser()"  tag="div" class="login"><img src="img/login.png" alt=""></div>
+                    </div>
+                    <div class="swipebox">
+                        <div class="swipe">
+                            <div class="swipe-container">
+                                <li v-for="item in swipe1"  class="swipe-li">
+                                    <router-link :to="'/detail/'+item.id"> <img :src="'img/' + item.img" alt=""></router-link>
+                                </li>
+                            </div>
+                        </div>
+                        <ul class="swipeicon">
+                            <li v-for="(item,index) in swipe1" :class="'icon ' + (swipe1choose===index?'checked':'')"></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <nav>
+            <ul  class="nav">
+                <div class="swipe">
+                    <div class="swipe-container">
+                        <li class="swipe-li nav-li">
+                            <ul>
+                               <li v-for="item in swipe2.page1" @click="gosearch(item.id,item.text)">
+                                   <img :src="'img/' + item.img" alt="">
+                                    <div class="title">{{item.text}}</div></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="swipe-li nav-li" >
+                            <ul>
+                                <li v-for="item in swipe2.page2"  @click="gosearch(item.id,item.text)">
+                                    <img :src="'img/' + item.img" alt="">
+                                    <div class="title">{{item.text}}</div></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
+                <ul class="swipeicon">
+                    <div class="swipeicon-inner">
+                        <li :class="'icon ' + (swipe2choose===0?'checked':'')"></li>
+                        <li :class="'icon ' + (swipe2choose===1?'checked':'')"></li>
+                    </div>
+                </ul>
+            </ul>
+        </nav>
+        <div class="topLine">
+            <img src="img/tips-scroll1.png" alt="">
+            <ul class="topLine-text" :style="'transition: all 500ms ease 0s;transform: translateY('+adY+'rem);'">
+                <li v-for="item in topLine"><router-link :to="'/detail/'+item.id"> {{item.text}}</router-link></li>
+            </ul>
+        </div>
+        <div class="recommend">
+            <li v-for="item in recommend">
+                <router-link :to="'/detail/'+item.id"> <img :src="'img/'+item.img" alt="">
+                <div class="info">
+                    <h3>{{item.title}}</h3>
+                    <span>{{item.text}}</span>
+                </div>
+                </router-link>
+            </li>
+        </div>
+        <div class="adbox">
+            <div class="swipe">
+                <div class="swipe-container">
+                    <li v-for="item in swipe3"  class="swipe-li">
+                        <router-link :to="'/detail/'+item.id"> <img :src="'img/' + item.img" alt=""></router-link>
+                    </li>
+                </div>
+            </div>
+            <ul class="swipeicon">
+                <div class="swipeicon-inner">
+                    <li v-for="(item,index) in swipe3" :class="'icon ' + (swipe3choose===index?'checked':'')"></li>
+                </div>
+            </ul>
+        </div>
+        <div class="recom">
+            <div class="recom-title">
+                <div class="recom-title-text">为您推荐</div>
+            </div>
+            <ul class="clear">
+                <li v-for="item in list">
+                    <router-link :to="'/detail/'+item.id"><div class="li-inner">
+                        <img :src="'img/'+item.img" alt="">
+                        <h3>{{item.title}}</h3>
+                        <p>{{item.intro}}</p>
+                        <div class="clear">
+                            <span class="price">￥{{item.price}}</span>
+                            <span class="ori-pirce">{{item.oriprice}}</span>
+                            <span class="sale">售{{item.sale}}</span>
+                        </div>
+                    </div></router-link>
+                </li>
+            </ul>
+        </div>
+        <footer>
+            <div class="footer">
+                <div class="address">北京市昌平区北七家镇北清路平西王府古玩城二层</div>
+                <div class="copyright">
+                    <span class="copyright-text">© 2017爱创团购</span>
+                </div>
+            </div>
+        </footer>
+    </section>
+</template>
+
+<template id="list-tpl">
+    <section>
+        <div class="tapbarbox">
+            <router-link  to="/" tag="div"  class="back"><img src="img/back.png" alt=""></router-link>
+            <div class="searchbox">
+                <img src="img/searchicon.png" alt="">
+                <input type="text"  placeholder="搜索商家、分类、地点" v-model="searchText" @keyup.enter="gosearch()">
+            </div>
+            <router-link to="/" tag="div" class="home">
+                <img src="img/homeicon.png" alt="">
+            </router-link>
+        </div>
+        <div :class="{'slidebox':true,'fix':slideboxFix}" >
+            <ul class="order">
+                <li @click="changeshow('type')"  :class="{'checked':showtype === 'type'}">{{showClass}}</li>
+                <li @click="changeshow('plcae')" :class="{'checked':showtype === 'plcae'}">{{placeText}}</li>
+                <li @click="changeshow('sort')"  :class="{'checked':showtype === 'sort'}">{{orderText}}</li>
+                <li @click="changeshow('choose')" :class="{'checked':showtype === 'choose'}">筛选</li>
+            </ul>
+            <ul class="termbox">
+                <li v-show="showtype === 'type'" >
+                    <ul class="child-term">
+                        <li v-for="item in types" @click="chooseClass(item.text,item.id)">{{item.text}}</li>
+                    </ul>
+                </li>
+                <li  v-show="showtype === 'plcae'">
+                    <ul class="child-term">
+                        <li v-for="item in place" @click="searchByPlace(item)">{{item}}</li>
+                    </ul>
+                </li>
+                <li  v-show="showtype === 'sort'">
+                    <ul class="child-term">
+                        <li v-for="item in orders" @click="orderBy(item.id,item.desc,item.text)">{{item.text}}</li>
+                    </ul>
+                </li>
+                <li  v-show="showtype === 'choose'">
+                    <ul class="chose-first">
+                        <li><input type="checkbox">可预约</li>
+                        <li><input type="checkbox">免预约</li>
+                    </ul>
+
+                    <ul class="chose-second">
+                        <h4>价格</h4>
+                        <li :class="{checked:filterS===''&&filterE===''}" @click="clearFilter()">不限</li>
+                        <li><input type="number" v-model="filterS"> -- <input type="number" v-model="filterE"> 元</li>
+
+                    </ul>
+                    <div class="chooseok" @click="surefilter()"> 完成</div>
+                </li>
+            </ul>
+        </div>
+        <div class="recom">
+            <div class="nores" v-show="nores">暂无搜索结果...</div>
+            <ul class="clear">
+                <li v-for="item in dealList">
+                    <router-link :to="'/detail/'+item.id"><div class="li-inner">
+                        <img :src="'img/'+item.img" alt="">
+                        <h3>{{item.title}}</h3>
+                        <p>{{item.intro}}</p>
+                        <div>
+                            <span class="price">￥{{item.price}}</span>
+                            <span class="ori-pirce">{{item.oriprice}} </span >
+                            <span class="sale">售{{item.sale}}</span>
+                        </div>
+                    </div></router-link>
+                </li>
+            </ul>
+        </div>
+    </section>
+</template>
+
+<template id="detail-tpl">
+    <section>
+        <div class="tapbarbox detail">
+            <div @click="goback()"  class="back"><img src="img/back.png" alt=""></div>
+            商品详细
+            <router-link to="/" tag="div" class="home">
+                <img src="img/homeicon.png" alt="">
+            </router-link>
+        </div>
+        <div class="imgbox">
+            <img :src="'img/'+detailObj.img" alt="">
+            <div class="intro">
+                <h4>{{detailObj.title}}</h4>
+                <p>{{detailObj.intro}}</p>
+            </div>
+        </div>
+        <ul class="salebox">
+            <li><img src="img/return.png" alt="">支持随时退款</li>
+            <li><img src="img/return.png" alt="">支持过期自动退</li>
+            <li><img src="img/saled.png" alt="">已售{{detailObj.sale}}</li>
+        </ul>
+        <ul class="business">
+            <li class="title">商家信息</li>
+            <li class="name">
+                <div class="namebox">
+                    <div class="tel">
+                        <a href="tel:13190017691"><img src="img/tel.png" alt=""></a>
+                    </div>
+                    <div>{{detailObj.name}}</div>
+                    <div class="star">
+                        <img v-for="item in detailObj.star" src="img/star.png" alt="">
+                    </div>
+                </div>
+            </li>
+            <li class="address">{{detailObj.address}}</li>
+        </ul>
+        <ul class="business buyneed">
+            <li class="title">购买须知</li>
+            <li class="address" v-for="item in detailObj.buyneed">
+                <div class="child-title">
+                    {{item.title}}
+                </div>
+               <p v-for="itemchild in item.text">{{itemchild}}</p>
+            </li>
+        </ul>
+        <div class="bottombar">
+            <div class="buybt" @click="goPay()">
+                立即抢购
+            </div>
+            <p><span class="price">¥{{detailObj.price}}</span><span class="oripirce">门市价 :  ¥{{detailObj.oriprice}}</span></p>
+        </div>
+    </section>
+</template>
+<template id="login-tpl">
+    <section>
+        <div class="tapbarbox detail">
+            <div  @click="goback()" class="back"><img src="img/back.png" alt=""></div>
+            爱创团购
+            <router-link to="/" tag="div" class="home">
+                <img src="img/homeicon.png" alt="">
+            </router-link>
+        </div>
+
+        <div class="login-title">手机号登录</div>
+        <form class="login-form">
+            <div class="input-box">
+                <div v-show="!showSencond" @click="getCode()" :class="{getcode:true,disabled:dealTel}">获取验证码</div>
+                <div v-show="showSencond " class="getcode disabled">{{second}}</div>
+            <label><input type="tel" v-model="tel" placeholder="请输入手机号"></label></div>
+            <div class="input-box"><label><input type="text" v-model="checkcode" placeholder="请输入短信验证码"></label></div>
+        </form>
+        <div class="loginbt" @click="login()">登录</div>
+        <div class="tipbox" v-show="isShowTip">{{tipmsg}}</div>
+    </section>
+</template>
+<template id="pay-tpl">
+    <section>
+        <div class="tapbarbox detail">
+            <router-link to="/"  class="back"><img src="img/back.png" alt=""></router-link>
+            订单支付
+            <router-link to="/" tag="div" class="home">
+                <img src="img/homeicon.png" alt="">
+            </router-link>
+        </div>
+        <ul  class="order-info">
+            <li><span>单价 :</span><span>{{onePrice}}元</span></li>
+            <li><span>数量 :</span><span><span :class="{del:true,active:count>1?true:false}" @click="del()">-</span><input type="text" v-model="count">
+                <span class="add active" @click="add()">+</span></span></li>
+            <li><span>总价:</span><span class="orange">{{dealTotal}}元</span></li>
+        </ul>
+        <div class="paytype">选择支付方式</div>
+        <ul  class="order-info order-type">
+            <li @click="chooseType('wx')"><span><img src="img/wxicon.png" alt="">微信支付</span><span :class="{checked:type==='wx'}">✔</span></li>
+            <li @click="chooseType('zfb')"><span><img src="img/zfbicon.png" alt="">支付宝支付</span><span :class="{checked:type==='zfb'}">✔</span></li>
+        </ul>
+        <div class="paybt" @click="pay()">立即支付</div>
+        <div class="toast" v-show="payingShow">
+            <div>
+                <img src="img/payok.png" alt="" v-show="paymsg != '支付中...'">
+                <img src="img/paying.png" alt="" v-show="paymsg === '支付中...'"><br>
+                <span>{{paymsg}}</span>
+            </div>
+
+        </div>
+    </section>
+</template>
+<template id="user-tpl">
+    <section>
+        <div class="tapbarbox detail">
+            <router-link to="/"  class="back"><img src="img/back.png" alt=""></router-link>
+
+            <router-link to="/" tag="div" class="home">
+                <img src="img/homeicon.png" alt="">
+            </router-link>
+        </div>
+        <div class="userbox">
+            <div class="user-imgbox"><img  :src="'img/'+data.img"  alt=""></div>
+            <div class="tel">{{data.telnum}}</div>
+        </div>
+        <ul class="user-menu">
+            <li> <router-link to="/" tag="div" class="home"><img src="img/userhome.png" alt="">团购首页 <span><img src="img/right.png" alt=""></span></router-link></li>
+            <li> <router-link to="/list" tag="div" class="home"><img src="img/team.png" alt="">全部团购<span><img src="img/right.png" alt=""></span></router-link></li>
+            <li @click="toggleOrder()"><img src="img/order.png" alt="">我的订单<span><img src="img/right.png" alt="" :class="{normal:!showorder}"></span></li>
+        </ul>
+        <transition  name="fade" mode="out-in" >
+            <ul class="my-order" v-if="showorder">
+                <li v-for="item in data.list">
+                    <img :src="'img/'+item.img" alt="">
+                    <div class="my-order-info">
+                        <h4>{{item.title}}</h4>
+                        <div><span>数量 : {{item.count}}</span><span>总价 : ¥{{item.price}}</span></div>
+                    </div>
+                </li>
+            </ul>
+        </transition>
+    </section>
+</template>
+<script src="static/lib/require.js"></script>
+
+<script>
+    requirejs.config({
+        baseUrl:"static",
+        map:{
+            "*":{
+                "css":"lib/css"
+            },
+            "router":{
+                "mrouter":"lib/vue-router"
+            },
+            "vm":{
+                "mrouter":"lib/vue-router"
+            }
+        },
+        shim:{
+            "lib/vue":{
+                exports:"Vue"
+            },
+            "lib/vue-resource":{
+                exports:"VueResource"
+            },
+            "lib/vue-router":{
+                exports:"VueRouter"
+            },
+            "lib/vuex":{
+                exports:"Vuex"
+            },
+            "lib/mobile-swipe":{
+                exports:"Swipe"
+            }
+        }
+    });
+    require(["vm/app","css!reset.css","reset"]);
+</script>
+</body>
+</html>

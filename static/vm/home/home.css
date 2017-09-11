@@ -1,0 +1,379 @@
+body{
+    font-size: 0.14rem;
+    background: #f2f2f2;
+}
+.header{
+    min-height: 1.2rem;
+    position: relative;
+}
+.header .swipebox{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    top:0;
+    left: 0;
+}
+/*.header .swipebox li{*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*position: absolute;*/
+/*top: 0;*/
+/*left: 0;*/
+/*}*/
+/*.header .swipebox li img{*/
+/*width: 100%;*/
+/*}*/
+.header .search{
+    height: 0.44rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+.header .search div{
+    float: left;
+    line-height: 0.3rem;
+}
+.header .search .city,
+.header .search .login{
+    width: 0.35rem;
+    height: 0.3rem;
+    padding-top: 0.09rem;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.header .search .city{
+    margin-left: 0.05rem;
+}
+
+.header .search .city:after {
+    content: '';
+    border-bottom: 0.01rem solid #fff;
+    width: 0.05rem;
+    height: 0.05rem;
+    border-left: 0.01rem solid #fff;
+    -webkit-transform: translateY(-100%) rotateZ(-45deg);
+    position: absolute;
+    top: 50%;
+    margin: 0.02rem 0 0 0.05rem
+}
+.search-input{
+    width: calc(100% - 0.9rem);
+    margin-left: 0.14rem;
+    height: 0.3rem;
+    background: rgba(255,255,255,0.6);
+    border-radius:5rem;
+    margin-top: 0.09rem;
+}
+.search-input img{
+    width: 0.15rem;
+    margin: .08rem 0 0 .1rem;
+}
+.search-input input{
+    border: none;
+    float: right;
+    margin-top: 0.075rem;
+    height: 0.15rem;
+    margin-right: 0.1rem;
+    background: none;
+    outline: none;
+    width:calc(100% - 0.4rem);
+    font-size: 0.12rem;
+}
+.nav{
+    padding: 0.0rem 0rem 0.2rem 0;
+    margin: 0 0 0 0;
+    background: #fff;
+    height: 1.75rem;
+    position: relative;
+}
+.nav-li ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.nav-li li{
+    font-size: 0.13rem;
+    flex-basis:25%;
+    padding: 0.11rem 0rem 0.02rem 0rem;
+    box-sizing: border-box;
+    text-align: center;
+    color: #666;
+}
+.nav-li li img{
+    width: 0.5rem;
+    margin-bottom: 0.02rem;
+}
+.recommend{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+.recommend li{
+    flex-basis:50%;
+    box-sizing: border-box;
+    height: 0.8rem;
+    overflow: hidden;
+    background: #ffffff;
+    position: relative;
+}
+.recommend li:nth-child(odd){
+    border-right: solid 1px #ededed;
+}
+.recommend li:nth-child(1),
+.recommend li:nth-child(2){
+    border-bottom:solid 0.8px #ededed;
+}
+.recommend li img{
+    width:0.7rem;
+    float: right;
+    margin-left: -0.03rem;
+    display: block;
+    margin-right: 0.03rem;
+}
+.recommend li .info{
+    margin:0.2rem 0.65rem  0 .04rem;
+    text-align: center;
+}
+
+.recommend li .info h3{
+    font-weight: normal;
+    font-size: 0.15rem;
+    letter-spacing: 1px;
+}
+
+.recommend li .info span{
+    font-size: 0.11rem;
+    margin-top: 0.02rem;
+    color: #999;
+}
+
+.pro-list{
+    margin-top: 0.1rem;
+    background: #fff;
+}
+.pro-list-title{
+    text-align: center;
+    color: #ff4f00;
+    height: 0.43rem;
+    line-height: 0.43rem;
+    background: #fff;
+    border-bottom: solid 1px #ededed;
+}
+.pro-list .item{
+    height: 1.08rem;
+    display: flex;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    padding: 0.12rem 0.1rem 0.11rem 0.1rem;
+    border-bottom: 1px solid #ededed;
+}
+.pro-list .item:last-child{
+    border: none;
+}
+.pro-list .item img{
+    display: block;
+    width: 1.24rem;
+    margin-right: 0.12rem;
+}
+.pro-list .item .pro-info{
+    overflow: hidden;
+}
+.pro-list .item .pro-intro{
+    text-align: left;
+    width: 100%;
+    font-size: 0.12rem;
+    color: #787878;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin:0.07rem 0 0 -0.05rem;
+}
+.pro-list .item .price{
+    margin-top: 0.1rem;
+}
+.pro-list .item .price .now-price{
+    color: #ff4f00;
+    font-size: 0.14rem;
+}
+.pro-list .item .price .org-price{
+    color: #999;
+    text-decoration: line-through;
+    font-size: 0.11rem;
+}
+.pro-list .item .price .sale{
+    float: right;
+    font-size: 0.11rem;
+    color: #787878;
+}
+.footer{
+    margin: 0.13rem 0 0.3rem;
+    text-align: center;
+    font-size: 0.12rem;
+    color: #666;
+}
+.footer .address{
+    margin-bottom: 0.08rem;
+}
+.copyright:after{
+    content: '';
+    height: 0;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    margin-top: -0.08rem;
+}
+.copyright-text{
+    background: #f2f2f2;
+    padding:  0 0.1rem;
+}
+
+.swipeicon{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    z-index: 10;
+}
+.swipeicon li{
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    margin: 0 .03rem;
+    background: rgba(0,0,0,0.3);
+    border-radius: 200px;
+}
+.swipeicon li.checked{
+    background: #fff;
+}
+.nav .swipeicon li.checked{
+    background: #f58220 !important;
+}
+.swipeicon-inner{
+    display: inline-block;
+    background: #fff;
+    position: relative;
+    z-index: 10;
+    padding: 0 0.15rem;
+}
+.swipebox .swipeicon-inner{
+    background: transparent;
+}
+.nav .swipeicon:after{
+    content: "";
+    display: block;
+    height: 0;
+    border-bottom:solid 1px #ededed;
+    position: relative;
+    top: -0.08rem;
+    margin: 0 0.04rem;
+}
+.topLine{
+    height: 0.44rem ;
+    background: #fff;
+    padding: 0 0.06rem 0 0.06rem;
+    margin-bottom: 0.1rem;
+    line-height: 0.3rem;
+    color: #666;
+    overflow: hidden;
+}
+.topLine img{
+    width: 0.75rem;
+    float: left;
+    margin-top: 0.08rem;
+}
+.topLine-text{
+    margin-left: 0.8rem;
+}
+.topLine-text li{
+    height: 0.31rem;
+    line-height: 0.31rem;
+    margin-bottom: 0.05rem;
+    font-size: 0.13rem;
+    letter-spacing: 1px;
+}
+.adbox{
+    margin-top: 0.1rem;
+    height: 0.68rem;
+    position: relative;
+}
+.adbox .swipeicon{
+    text-align: right;
+}
+.adbox .swipeicon-inner{
+    background: transparent;
+}
+.adbox .swipeicon-inner li{
+    background: #fff;
+}
+.adbox .swipeicon-inner li.checked{
+    width: 15px;
+    background: orange;
+}
+
+
+.header .search .login img{
+    width: 0.2rem;
+    position: relative;
+    top: 0.05rem;
+}
+
+
+.city-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 100;
+    overflow: auto;
+    transition: all 500ms ease 0s;
+}
+.city-box .city-title{
+    height: 0.44rem;
+    line-height: 0.44rem;
+    border-bottom: solid 1px #ddd;
+}
+.city-box .city-title img{
+    vertical-align: middle;
+    height: 0.25rem;
+    margin-top: -0.02rem;
+    margin-left: 0.1rem;
+}
+.city-box ul li{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    border-bottom: solid 1px #ededed;
+    box-sizing: border-box;
+    margin: 0 0.1rem;
+
+}
+.city-box ul{
+    height: calc(100% - 0.44rem);
+    overflow: auto;
+}
+
+.city-box ul::-webkit-scrollbar{width:5px;background-color: #fff; margin-right: 3px;}
+/*定义滚动条轨道 内阴影+圆角*/
+.city-box ul::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(210,210,210,0.1);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/*定义滑块 内阴影+圆角*/
+.city-box ul::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(210,210,210,0.1);
+    background-color: #d2d2d2;
+}

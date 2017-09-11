@@ -1,0 +1,89 @@
+.tapbarbox.detail{
+    text-align: center;
+    line-height: 0.44rem;
+    color: #fff;
+    position: relative;
+}
+.login-title{
+    height: 0.44rem;
+    line-height: 0.44rem;
+    text-align: center;
+    color: #ff4683;
+    border-bottom: solid 2px #ff4683;
+    background: #fff;
+    font-size: 0.16rem;
+}
+.login-form{
+    background: #fff;
+    padding:0.02rem 0.1rem;
+    position: relative;
+}
+.login-form .input-box{
+    height: 0.42rem;
+    line-height: 0.42rem;
+    position: relative;
+}
+.login-form .input-box:first-child{
+    border-bottom: solid 1px #ededed;
+    padding-right: 1rem;
+}
+.login-form .input-box .getcode{
+    width: 0.9rem;
+    position: absolute;
+    right: 0;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    text-align: center;
+    font-size: 0.14rem;
+    color: #ff4683;
+    background: #fff;
+    border:solid 1px #ff4683;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.login-form .input-box .getcode.disabled{
+    background: #ededed;
+    color: #999;
+    border:solid 1px transparent;
+}
+.login-form .input-box label{
+    display: block;
+}
+.login-form .input-box input{
+    width: 100%;
+    display: block;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    margin-top: 0.09rem;
+    border: none;
+    background: #ededed;
+    box-sizing: border-box;
+    border-radius:3px;
+    padding: 0 0.1rem;
+    outline: none;
+}
+.loginbt{
+    background: #ff4683;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    color: #fff;
+    margin: 0.1rem 0.09rem;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.tipbox{
+    position: absolute;
+    width: 80%;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    color: #fff;
+    background: rgba(0,0,0,0.6);
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+    text-align: center;
+    font-size: 0.11rem;
+    transition: all 500ms ease 0s;
+}

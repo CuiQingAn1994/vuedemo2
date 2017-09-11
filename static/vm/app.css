@@ -1,0 +1,172 @@
+.recom{
+    background: #fff;
+    margin-top: 0.1rem;
+    padding: 0 0.1rem ;
+    padding-bottom: 0.2rem;
+
+}
+.recom-title{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    text-align: center;
+}
+.recom-title-text{
+    position: relative;
+    display: inline-block;
+    padding: 0 0.5rem;
+    z-index: 10;
+    background: #fff;
+}
+.recom-title:after{
+    content: "";
+    display: block;
+    height: 0;
+    border-bottom:solid 1px #ededed;
+    position: relative;
+    top: -0.22rem;
+}
+.recom-title-text:before,
+.recom-title-text:after{
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 15px;
+    display: block;
+    position: absolute;
+    top:0.16rem;
+    background: #ccc;
+}
+.recom-title-text:before{
+    left: 0.2rem;
+}
+.recom-title-text:after{
+    right: 0.2rem;
+}
+.recom-title-text:after{
+
+}
+.recom li {
+    width: 50%;
+    float: left;
+    overflow: hidden;
+    margin-bottom: 0.08rem;
+    transition: all 500ms ease 0s;
+}
+.recom li img{
+    width: 100%;
+    display: block;
+}
+
+.recom li .li-inner{
+    border: solid 0.8px #efefef;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-bottom:0.05rem;
+
+}
+
+.recom li:nth-child(odd) .li-inner{
+    margin-right:0.05rem;
+}
+.recom li:nth-child(even) .li-inner{
+    margin-left:0.05rem;
+}
+.recom li .li-inner h3{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    margin: 0.05rem 0.1rem;
+    font-weight: normal;
+    font-size: 0.14rem;
+    color: #555;
+}
+.recom li .li-inner p{
+    margin: 0.06rem 0.1rem 0.04rem 0.1rem;
+    height: 0.31rem;
+    font-size: 0.11rem;
+    color: #666;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.recom li .li-inner div{
+    margin: 0.05rem 0.1rem;
+}
+.recom li .li-inner div .price{
+    color: #f24;
+}
+.recom li .li-inner div .ori-pirce{
+     color: #999;
+     text-decoration: line-through;
+     font-size: 0.10rem;
+ }
+.recom li .li-inner div .sale{
+    color: #999;
+    font-size: 0.10rem;
+    float: right;
+    position: relative;
+    bottom: -0.045rem;
+}
+
+
+
+
+
+
+
+
+
+.tapbarbox{
+    height: 0.44rem;
+    background: #ff4683;
+    overflow: hidden;
+    position: relative;
+}
+.tapbarbox .back,.tapbarbox .home{
+    position: absolute;
+    top: 0;
+    font-family: cursive;
+    text-align: center;
+    line-height: 0.44rem;
+    height: 100%;
+}
+.tapbarbox .back{
+    width: 0.5rem;
+    left: 0;
+    font-size: 0.24rem;
+    color: #fff;
+}
+.tapbarbox .home{
+    width: 0.45rem;
+    right: 0;
+}
+.tapbarbox .home img,.tapbarbox .back img{
+    height: 0.2rem;
+    vertical-align: middle;
+    margin-top: -0.04rem;
+}
+.tapbarbox .searchbox{
+    margin: 0.06rem 0.45rem 0 0.5rem;
+    height: 0.32rem;
+    background: #fff;
+}
+.tapbarbox .searchbox img{
+    height: 0.15rem;
+    vertical-align: middle;
+    margin: 0 0 0 0.07rem;
+}
+.tapbarbox .searchbox input{
+    height: 0.24rem;
+    margin: 0.05rem 0.03rem 0 0;
+    width: calc(100% - 0.4rem);
+    outline: none;
+    border: none;
+}
+
+.orange{
+    color: #FF9712;
+}

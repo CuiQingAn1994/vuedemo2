@@ -1,0 +1,99 @@
+.userbox{
+    height: 1.5rem;
+    background: #ff4683;
+    text-align: center;
+    color: #fff;
+    margin-top: -0.01rem;
+}
+.userbox img{
+    height: 0.7rem;
+    box-sizing: border-box;
+    border: solid 2px #fff;
+    border-radius: 200px;
+    background: #fff;
+    margin-top: 0.05rem;
+}
+.user-imgbox{
+    margin-bottom: 0.1rem;
+}
+.tel{
+    font-size: 0.12rem;
+}
+.user-menu{
+    background: #fff;
+}
+.user-menu>li{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    border-bottom: solid 1px #ededed;
+    box-sizing:border-box;
+    font-size:0.13rem;
+    color: #666;
+    padding:0  0.1rem;
+}
+.user-menu>li img{
+    height: 0.25rem;
+    vertical-align: middle;
+    margin-top: -0.02rem;
+    margin-right: 0.07rem;
+}
+.my-order{
+    background: #fff;
+}
+.my-order li img{
+    width: 0.7rem;
+    float: left;
+    border-radius:3px;
+}
+
+.my-order-info{
+    height: 0.45rem;
+    background: #fff;
+    margin-left: 0.8rem;
+}
+.my-order li{
+    padding: 0.1rem 0;
+    margin: 0 0.1rem;
+    border-bottom: solid 1px #ededed;
+}
+.my-order-info h4{
+    height: 0.25rem;
+    line-height: 0.2rem;
+    color: #555;
+}
+.my-order-info div{
+    height: 0.15rem;
+    line-height: 0.15rem;
+    color: #999;
+    font-size: 0.12rem;
+}
+.my-order-info div span:last-child{
+    float: right;
+}
+.user-menu li{
+    position: relative;
+}
+.user-menu li span:last-child{
+    position: absolute;
+    right: 0.12rem;
+    top: 0.03rem;
+
+}
+.user-menu li span>img{
+    height: 0.15rem;
+}
+
+.user-menu li:last-child span:last-child img{
+    transform:rotate(90deg);
+    transition: all 500ms ease 0s;
+}
+.user-menu li:last-child span:last-child img.normal{
+    transform:rotate(0deg);
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+    opacity: 0
+}

@@ -1,0 +1,148 @@
+.tapbarbox.detail{
+     text-align: center;
+    line-height: 0.44rem;
+    color: #fff;
+    position: relative;
+ }
+.imgbox{
+    position: relative;
+}
+.imgbox img{
+    width: 100%;
+
+}
+.intro{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0.05rem 0.1rem;
+    color: #fff;
+}
+.intro h4{
+    font-weight:normal;
+}
+.intro p{
+     font-size: 0.11rem;
+    margin: 0.05rem 0 0.1rem  0;
+}
+.salebox{
+    height: 0.44rem;
+    line-height: 0.44rem;
+    font-size:0.11rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background: #fff;
+}
+.salebox li{
+    flex: 1;
+    color: #ff4683;
+}
+.salebox li:last-child{
+    color: #666;
+}
+.salebox li img{
+    display: inline;
+    width: 0.16rem;
+    vertical-align: middle;
+    margin-top: -0.015rem;
+    margin-right: 0.04rem;
+}
+.business{
+    margin-top: 0.1rem;
+    background: #fff;
+}
+.business li{
+    min-height: 0.4rem;
+    line-height: 0.4rem;
+    padding: 0 0.1rem;
+    border-bottom:solid 1px #ededed;
+}
+.business li:last-child{
+    border-bottom:none;
+}
+.business li.title{
+    font-size: 0.13rem;
+}
+.business li.name{
+    font-size: 0.13rem;
+    font-weight: bold;
+}
+.business li.address{
+     font-size: 0.12rem;
+    line-height: 0.2rem;
+    padding-top:0.1rem;
+    padding-bottom:0.1rem;
+}
+
+.business li.address p{
+    margin-bottom: 0.05rem;
+}
+
+.business li.name{
+    position: relative;
+    padding-right: 0.7rem;
+}
+.business li.name .tel{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.7rem;
+    height: 0.45rem;
+    line-height: 0.7rem;
+    text-align: center;
+    border-left: solid 1px #ededed;
+}
+.business li.name .tel img{
+    width: 0.35rem;
+}
+.business li .namebox .star img{
+    width: .2rem;
+}
+.business li .namebox .star {
+    line-height: 0.3rem;
+}
+.business li .child-title{
+    color: #999;
+    margin-bottom:0.05rem
+}
+.buyneed{
+    margin-bottom: 0.5rem;
+}
+
+.bottombar{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    padding: 0 0.11rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    border-top: solid 1px #ededed;
+    box-sizing: border-box;
+}
+.bottombar .price{
+    color: #ff4683;
+    margin-right: 0.1rem;
+    font-size: 0.18rem;
+}
+.bottombar .oripirce{
+    color: #999;
+    font-size: 0.12rem;
+}
+.bottombar .buybt{
+    float: right;
+    background: #ff4683;
+    color: #fff;
+    text-align: center;
+    height: 0.34rem;
+    line-height: 0.34rem;
+    margin-top:0.08rem ;
+    padding: 0 0.15rem;
+    border-radius: 3px;
+    font-size: 0.12rem;
+}
